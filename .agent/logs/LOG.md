@@ -3,8 +3,8 @@
 `Current Status`
 =================
 **Last Updated:** 2026-02-28
-**Tasks Completed:** 11
-**Current Task:** TASK-10 Complete
+**Tasks Completed:** 12
+**Current Task:** TASK-12 Complete
 
 ----------------------------------------------
 
@@ -103,3 +103,13 @@
 - 3 placeholder projects: AI Design System, Sunlit, Portfolio
 - 5 unit tests (`projects.test.ts`) all passing — validates structure, uniqueness, optional fields
 - All 25 unit tests passing, tsc clean
+
+### 2026-02-28 — TASK-12: Wire theme provider and toggle into root layout
+- Simplified Header to minimal fixed toggle at top-right (removed template nav, links, demos)
+- Simplified Footer to minimal copyright line with Alex Russell's name
+- Updated page title from "TanStack Start Starter" to "Alex Russell"
+- ThemeProvider wraps app, ThemeToggle visible at top, init script prevents flash
+- Full cycle verified: daylight → dusk → nighttime → morning → daylight, persistence across reload
+- 5 Playwright e2e tests (`tests/theme-wiring.spec.ts`) all passing
+- All 25 unit tests + 26 e2e tests passing, tsc clean
+- Screenshot: `.agent/screenshots/TASK-12-1.png`

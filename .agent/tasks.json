@@ -81,7 +81,7 @@
     "title": "Wire theme provider and toggle into root layout",
     "category": "functional",
     "specFilePath": ".agent/tasks/TASK-12.json",
-    "passes": false
+    "passes": true
   },
   {
     "id": "TASK-13",
