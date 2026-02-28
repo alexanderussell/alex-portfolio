@@ -53,13 +53,13 @@ function BlogPost() {
           />
         ) : null}
         <p className="island-kicker mb-2">Post</p>
-        <h1 className="display-title mb-3 text-4xl font-bold text-[var(--sea-ink)] sm:text-5xl">
+        <h1 className="display-title mb-3 text-4xl font-bold text-foreground sm:text-5xl">
           {post.title}
         </h1>
-        <p className="mb-6 text-sm text-[var(--sea-ink-soft)]">
+        <p className="mb-6 text-sm text-muted-foreground">
           {new Date(post.pubDate).toLocaleDateString()}
         </p>
-        <div className="prose prose-slate prose-headings:text-[var(--sea-ink)] prose-p:text-[var(--sea-ink-soft)] prose-li:text-[var(--sea-ink-soft)] prose-ul:text-[var(--sea-ink-soft)] prose-ol:text-[var(--sea-ink-soft)] prose-strong:text-[var(--sea-ink)] prose-a:text-[var(--lagoon-deep)] max-w-none">
+        <div className="prose prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-ul:text-muted-foreground prose-ol:text-muted-foreground prose-strong:text-foreground prose-a:text-foreground max-w-none">
           {post.mdx ? (
             <MDXContent
               code={post.mdx}

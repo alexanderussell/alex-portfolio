@@ -18,7 +18,7 @@
     "title": "Add CSS variables for daylight theme",
     "category": "ui-ux",
     "specFilePath": ".agent/tasks/TASK-3.json",
-    "passes": false
+    "passes": true
   },
   {
     "id": "TASK-4",
