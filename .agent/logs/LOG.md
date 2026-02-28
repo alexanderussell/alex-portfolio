@@ -70,3 +70,14 @@
 - Added Playwright e2e test (`tests/background-gradient.spec.ts`) — 5 tests verifying gradient, pointer-events, position per theme
 - All 13 unit tests + 10 e2e tests passing, tsc clean
 - Screenshots: `.agent/screenshots/TASK-7-daylight.png`, `TASK-7-dusk.png`, `TASK-7-nighttime.png`, `TASK-7-morning.png`
+
+### 2026-02-28 — TASK-8: Build liquid-glass theme toggle component
+- Rewrote `lib/src/components/ThemeToggle.tsx` to use 4-theme system from ThemeProvider (replacing old light/dark/auto toggle)
+- Added `THEME_LABELS` map to `lib/src/lib/theme.ts` for display names
+- Glassmorphism styling: `backdrop-blur-md`, `bg-white/10`, `border-white/20` — faint glass effect
+- Displays current theme name, click cycles to next theme
+- Accessible: `aria-label="Cycle theme (current: Daylight)"`, keyboard focusable (Enter/Space)
+- Added ThemeProvider wrapper in `__root.tsx` so toggle can access theme context
+- 7 unit tests (`ThemeToggle.test.tsx`) + 5 Playwright e2e tests (`theme-toggle.spec.ts`) all passing
+- All 20 unit tests + 15 e2e tests passing, tsc clean
+- Screenshots: `.agent/screenshots/TASK-8-1.png`, `TASK-8-dusk.png`

@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 
 import TanStackQueryProvider from '../integrations/tanstack-query/root-provider'
+import { ThemeProvider } from '../providers/ThemeProvider'
 
 import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
 
@@ -55,9 +56,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="font-sans antialiased [overflow-wrap:anywhere] selection:bg-[rgba(0,0,0,0.12)]">
         <TanStackQueryProvider>
+          <ThemeProvider>
           <Header />
           {children}
           <Footer />
+          </ThemeProvider>
           <TanStackDevtools
             config={{
               position: 'bottom-right',
