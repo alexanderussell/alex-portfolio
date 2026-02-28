@@ -81,3 +81,10 @@
 - 7 unit tests (`ThemeToggle.test.tsx`) + 5 Playwright e2e tests (`theme-toggle.spec.ts`) all passing
 - All 20 unit tests + 15 e2e tests passing, tsc clean
 - Screenshots: `.agent/screenshots/TASK-8-1.png`, `TASK-8-dusk.png`
+
+### 2026-02-28 — TASK-9: Create Project type and static projects data
+- Created `lib/src/content/projects.ts` with `Project` interface and static `projects` array
+- Project interface: `id`, `title`, `href`, required; `description` optional
+- 3 placeholder projects: AI Design System, Sunlit, Portfolio
+- 5 unit tests (`projects.test.ts`) all passing — validates structure, uniqueness, optional fields
+- All 25 unit tests passing, tsc clean

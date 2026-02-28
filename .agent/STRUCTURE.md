@@ -7,6 +7,8 @@ lib/
 │   ├── hooks/            # Custom React hooks
 │   ├── providers/        # React context providers (ThemeProvider)
 │   ├── integrations/     # Third-party integrations (TanStack Query)
+│   ├── content/          # Static content data (projects)
+│   │   └── projects.ts   # Project type and static projects list
 │   ├── lib/              # Utilities and shared logic
 │   │   ├── site.ts       # Site config
 │   │   ├── theme.ts      # Theme types, cycle, helpers
