@@ -9,6 +9,13 @@
 /* Daylight theme: warm off-white, grayscale only */
 :root,
 [data-theme='daylight'] {
+  --gradient-bg: linear-gradient(
+    160deg,
+    oklch(0.98 0.01 80) 0%,
+    oklch(0.96 0.015 70) 30%,
+    oklch(0.95 0.02 55) 60%,
+    oklch(0.97 0.008 85) 100%
+  );
   --background: oklch(0.98 0.003 80);
   --foreground: oklch(0.15 0 0);
   --card: oklch(0.97 0.002 80);
@@ -46,6 +53,13 @@
 
 /* Dusk theme: warm grays, slightly darker than daylight, sunset-inspired */
 [data-theme='dusk'] {
+  --gradient-bg: linear-gradient(
+    160deg,
+    oklch(0.88 0.02 50) 0%,
+    oklch(0.82 0.03 40) 30%,
+    oklch(0.75 0.025 320) 65%,
+    oklch(0.85 0.015 55) 100%
+  );
   --background: oklch(0.88 0.006 60);
   --foreground: oklch(0.12 0 0);
   --card: oklch(0.86 0.005 60);
@@ -83,6 +97,13 @@
 
 /* Nighttime theme: near-black background, light text, grayscale */
 [data-theme='nighttime'] {
+  --gradient-bg: linear-gradient(
+    160deg,
+    oklch(0.15 0.005 270) 0%,
+    oklch(0.13 0.003 250) 35%,
+    oklch(0.17 0.004 280) 65%,
+    oklch(0.14 0.002 260) 100%
+  );
   --background: oklch(0.15 0 0);
   --foreground: oklch(0.92 0 0);
   --card: oklch(0.18 0 0);
@@ -118,7 +139,49 @@
   --sidebar-ring: oklch(0.45 0 0);
 }
 
-/* Placeholder for morning theme (TASK-6) */
+/* Morning theme: cool, soft dawn grays — lighter than dusk, cooler than daylight */
+[data-theme='morning'] {
+  --gradient-bg: linear-gradient(
+    160deg,
+    oklch(0.94 0.008 240) 0%,
+    oklch(0.92 0.012 230) 30%,
+    oklch(0.90 0.01 250) 60%,
+    oklch(0.93 0.006 235) 100%
+  );
+  --background: oklch(0.94 0.004 240);
+  --foreground: oklch(0.14 0 0);
+  --card: oklch(0.92 0.003 240);
+  --card-foreground: oklch(0.14 0 0);
+  --popover: oklch(0.92 0.003 240);
+  --popover-foreground: oklch(0.14 0 0);
+  --primary: oklch(0.18 0 0);
+  --primary-foreground: oklch(0.95 0 0);
+  --secondary: oklch(0.89 0.003 240);
+  --secondary-foreground: oklch(0.18 0 0);
+  --muted: oklch(0.89 0.003 240);
+  --muted-foreground: oklch(0.5 0.002 240);
+  --accent: oklch(0.89 0.003 240);
+  --accent-foreground: oklch(0.18 0 0);
+  --destructive: oklch(0.5 0 0);
+  --destructive-foreground: oklch(0.5 0 0);
+  --border: oklch(0.83 0.004 240);
+  --input: oklch(0.83 0.004 240);
+  --ring: oklch(0.6 0 0);
+  --chart-1: oklch(0.32 0 0);
+  --chart-2: oklch(0.48 0 0);
+  --chart-3: oklch(0.62 0 0);
+  --chart-4: oklch(0.76 0 0);
+  --chart-5: oklch(0.24 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.92 0.003 240);
+  --sidebar-foreground: oklch(0.14 0 0);
+  --sidebar-primary: oklch(0.18 0 0);
+  --sidebar-primary-foreground: oklch(0.95 0 0);
+  --sidebar-accent: oklch(0.89 0.003 240);
+  --sidebar-accent-foreground: oklch(0.18 0 0);
+  --sidebar-border: oklch(0.83 0.004 240);
+  --sidebar-ring: oklch(0.6 0 0);
+}
 
 @theme inline {
   --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
@@ -174,6 +237,16 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--gradient-bg);
+  pointer-events: none;
+  transition: background 400ms ease;
 }
 
 a {

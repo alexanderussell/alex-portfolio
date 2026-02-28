@@ -39,14 +39,14 @@
     "title": "Add CSS variables for morning theme",
     "category": "ui-ux",
     "specFilePath": ".agent/tasks/TASK-6.json",
-    "passes": false
+    "passes": true
   },
   {
     "id": "TASK-7",
     "title": "Implement Sunlit.place-inspired background gradients per theme",
     "category": "ui-ux",
     "specFilePath": ".agent/tasks/TASK-7.json",
-    "passes": false
+    "passes": true
   },
   {
     "id": "TASK-8",

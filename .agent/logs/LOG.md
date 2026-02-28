@@ -50,3 +50,23 @@
 - Added Playwright e2e test (`tests/nighttime-theme.spec.ts`) verifying theme application
 - All 13 unit tests + 4 e2e tests passing, tsc clean
 - Screenshot: `.agent/screenshots/TASK-5-1.png`
+
+### 2026-02-28 — TASK-6: Add CSS variables for morning theme
+- Added `[data-theme='morning']` block in `lib/src/styles.css` with cool dawn gray palette
+- Background `oklch(0.94 0.004 240)` — lighter than dusk (0.88), cool hue angle 240 (vs daylight's warm 80)
+- Cards, borders, muted tones use consistent cool gray with subtle blue chroma
+- Added Playwright e2e test (`tests/morning-theme.spec.ts`) verifying theme application
+- All 13 unit tests + 5 e2e tests passing, tsc clean
+- Screenshot: `.agent/screenshots/TASK-6-1.png`
+
+### 2026-02-28 — TASK-7: Implement Sunlit.place-inspired background gradients per theme
+- Added `--gradient-bg` CSS custom property to each theme block in `lib/src/styles.css`
+- Daylight: warm cream to soft gold (oklch hue 55–85, chroma 0.01–0.02)
+- Dusk: amber to soft purple sunset (oklch hue 40–320, chroma 0.015–0.03)
+- Nighttime: near-black with subtle cool depth (oklch hue 250–280, chroma 0.002–0.005)
+- Morning: cool pale blue-gray (oklch hue 230–250, chroma 0.006–0.012)
+- Applied via `body::before` pseudo-element: fixed, inset 0, z-index -1, pointer-events none
+- Smooth 400ms transition on theme change
+- Added Playwright e2e test (`tests/background-gradient.spec.ts`) — 5 tests verifying gradient, pointer-events, position per theme
+- All 13 unit tests + 10 e2e tests passing, tsc clean
+- Screenshots: `.agent/screenshots/TASK-7-daylight.png`, `TASK-7-dusk.png`, `TASK-7-nighttime.png`, `TASK-7-morning.png`
