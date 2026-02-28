@@ -3,8 +3,8 @@
 `Current Status`
 =================
 **Last Updated:** 2026-02-28
-**Tasks Completed:** 10
-**Current Task:** TASK-11 Complete
+**Tasks Completed:** 11
+**Current Task:** TASK-10 Complete
 
 ----------------------------------------------
 
@@ -88,6 +88,14 @@
 - Added 3 Playwright e2e tests (`tests/typography.spec.ts`) verifying CSS variables and computed styles
 - All 25 unit tests + 20 e2e tests passing, tsc clean
 - Screenshot: `.agent/screenshots/TASK-11-1.png`
+
+### 2026-02-28 — TASK-10: Implement homepage content block
+- Replaced template index route with minimal homepage: name (h1), bio (p), Projects heading (h2), projects list (ul)
+- Uses `display-title` class for h1/h2 (display size), `--font-size-body` for bio and links (body size)
+- Imports projects from `content/projects.ts`, renders as linked list items
+- 3 Playwright e2e tests (`tests/homepage-content.spec.ts`) — content, font sizes, screenshot
+- All 25 unit tests + 21 e2e tests passing, tsc clean
+- Screenshot: `.agent/screenshots/TASK-10-1.png`
 
 ### 2026-02-28 — TASK-9: Create Project type and static projects data
 - Created `lib/src/content/projects.ts` with `Project` interface and static `projects` array

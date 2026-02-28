@@ -67,7 +67,7 @@
     "title": "Implement homepage content block (name, bio, Projects, list)",
     "category": "ui-ux",
     "specFilePath": ".agent/tasks/TASK-10.json",
-    "passes": false
+    "passes": true
   },
   {
     "id": "TASK-11",
