@@ -4,7 +4,7 @@
     "title": "Define theme types and theme cycle order",
     "category": "data-model",
     "specFilePath": ".agent/tasks/TASK-1.json",
-    "passes": false
+    "passes": true
   },
   {
     "id": "TASK-2",
