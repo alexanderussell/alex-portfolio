@@ -25,14 +25,14 @@
     "title": "Add CSS variables for dusk theme",
     "category": "ui-ux",
     "specFilePath": ".agent/tasks/TASK-4.json",
-    "passes": false
+    "passes": true
   },
   {
     "id": "TASK-5",
     "title": "Add CSS variables for nighttime theme",
     "category": "ui-ux",
     "specFilePath": ".agent/tasks/TASK-5.json",
-    "passes": false
+    "passes": true
   },
   {
     "id": "TASK-6",
