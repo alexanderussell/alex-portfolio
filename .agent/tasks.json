@@ -88,6 +88,6 @@
     "title": "Ensure mobile-responsive layout",
     "category": "ui-ux",
     "specFilePath": ".agent/tasks/TASK-13.json",
-    "passes": false
+    "passes": true
   }
 ]

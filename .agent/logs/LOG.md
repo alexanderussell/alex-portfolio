@@ -3,8 +3,8 @@
 `Current Status`
 =================
 **Last Updated:** 2026-02-28
-**Tasks Completed:** 12
-**Current Task:** TASK-12 Complete
+**Tasks Completed:** 13
+**Current Task:** TASK-13 Complete
 
 ----------------------------------------------
 
@@ -113,3 +113,12 @@
 - 5 Playwright e2e tests (`tests/theme-wiring.spec.ts`) all passing
 - All 25 unit tests + 26 e2e tests passing, tsc clean
 - Screenshot: `.agent/screenshots/TASK-12-1.png`
+
+### 2026-02-28 — TASK-13: Ensure mobile-responsive layout
+- Added `min-h-[44px] min-w-[44px]` to ThemeToggle for touch-friendly 44px minimum target
+- Increased toggle padding from `px-3 py-1.5` to `px-4 py-2`
+- Verified: no horizontal overflow at 320px, content readable, max-width constrained
+- Existing `max-w-2xl px-6` on main and `overflow-x: hidden` on body already sufficient
+- 5 Playwright e2e tests (`tests/mobile-responsive.spec.ts`) — overflow, readability, touch target, max-width, screenshot
+- All 25 unit tests + 31 e2e tests passing, tsc clean
+- Screenshot: `.agent/screenshots/TASK-13-320px.png`
