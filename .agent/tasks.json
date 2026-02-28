@@ -11,7 +11,7 @@
     "title": "Create theme context and localStorage persistence",
     "category": "functional",
     "specFilePath": ".agent/tasks/TASK-2.json",
-    "passes": false
+    "passes": true
   },
   {
     "id": "TASK-3",

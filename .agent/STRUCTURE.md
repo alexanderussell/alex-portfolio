@@ -5,6 +5,7 @@ lib/
 ├── src/
 │   ├── components/       # Shared UI components
 │   ├── hooks/            # Custom React hooks
+│   ├── providers/        # React context providers (ThemeProvider)
 │   ├── integrations/     # Third-party integrations (TanStack Query)
 │   ├── lib/              # Utilities and shared logic
 │   │   ├── site.ts       # Site config
