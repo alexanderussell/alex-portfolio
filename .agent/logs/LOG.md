@@ -3,8 +3,8 @@
 `Current Status`
 =================
 **Last Updated:** 2026-02-28
-**Tasks Completed:** 3
-**Current Task:** TASK-3 Complete
+**Tasks Completed:** 10
+**Current Task:** TASK-11 Complete
 
 ----------------------------------------------
 
@@ -81,6 +81,13 @@
 - 7 unit tests (`ThemeToggle.test.tsx`) + 5 Playwright e2e tests (`theme-toggle.spec.ts`) all passing
 - All 20 unit tests + 15 e2e tests passing, tsc clean
 - Screenshots: `.agent/screenshots/TASK-8-1.png`, `TASK-8-dusk.png`
+
+### 2026-02-28 — TASK-11: Apply 2-font typography scale (display + body)
+- Added `--font-display`, `--font-size-display` (1.875rem), and `--font-size-body` (1rem) CSS custom properties in `@theme inline` block of `styles.css`
+- Updated `.display-title` class to use `var(--font-display)` and `var(--font-size-display)` instead of hardcoded values
+- Added 3 Playwright e2e tests (`tests/typography.spec.ts`) verifying CSS variables and computed styles
+- All 25 unit tests + 20 e2e tests passing, tsc clean
+- Screenshot: `.agent/screenshots/TASK-11-1.png`
 
 ### 2026-02-28 — TASK-9: Create Project type and static projects data
 - Created `lib/src/content/projects.ts` with `Project` interface and static `projects` array

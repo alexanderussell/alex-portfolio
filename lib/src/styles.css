@@ -145,7 +145,7 @@
     160deg,
     oklch(0.94 0.008 240) 0%,
     oklch(0.92 0.012 230) 30%,
-    oklch(0.90 0.01 250) 60%,
+    oklch(0.9 0.01 250) 60%,
     oklch(0.93 0.006 235) 100%
   );
   --background: oklch(0.94 0.004 240);
@@ -185,6 +185,9 @@
 
 @theme inline {
   --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-size-display: 1.875rem; /* 30px — name, section headings */
+  --font-size-body: 1rem; /* 16px — bio, list items */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -290,7 +293,8 @@ pre code {
 }
 
 .display-title {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: var(--font-display);
+  font-size: var(--font-size-display);
 }
 
 .island-shell {
@@ -317,7 +321,10 @@ pre code {
 button,
 .island-shell,
 a {
-  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
     transform 180ms ease;
 }
 
