@@ -1,0 +1,37 @@
+{
+  "id": "TASK-1",
+  "title": "Define theme types and theme cycle order",
+  "category": "data-model",
+  "description": "Create TypeScript types and constants for the 5-way theme system. Theme IDs: daylight, dusk, nighttime, morning. Cycle order is fixed.",
+  "acceptanceCriteria": [
+    "ThemeId type exported with union: 'daylight' | 'dusk' | 'nighttime' | 'morning'",
+    "THEME_CYCLE constant array defines order: daylight → dusk → nighttime → morning",
+    "Helper getNextTheme(current) returns next theme in cycle",
+    "Unit test verifies cycle wraps (morning → daylight)"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Create theme types file",
+      "details": "Create lib/src/lib/theme.ts. Export type ThemeId = 'daylight' | 'dusk' | 'nighttime' | 'morning'. Export const THEME_CYCLE: ThemeId[] = ['daylight','dusk','nighttime','morning'].",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Add getNextTheme helper",
+      "details": "Export function getNextTheme(current: ThemeId): ThemeId. Find index of current in THEME_CYCLE, return next; if last, return first.",
+      "pass": false
+    },
+    {
+      "step": 3,
+      "description": "Write unit test",
+      "details": "Create lib/src/lib/theme.test.ts. Test getNextTheme cycles correctly and morning → daylight.",
+      "pass": false
+    }
+  ],
+  "dependencies": [],
+  "estimatedComplexity": "low",
+  "technicalNotes": [
+    "Use existing Vitest setup in lib"
+  ]
+}

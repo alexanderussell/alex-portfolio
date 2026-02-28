@@ -1,0 +1,93 @@
+[
+  {
+    "id": "TASK-1",
+    "title": "Define theme types and theme cycle order",
+    "category": "data-model",
+    "specFilePath": ".agent/tasks/TASK-1.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-2",
+    "title": "Create theme context and localStorage persistence",
+    "category": "functional",
+    "specFilePath": ".agent/tasks/TASK-2.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-3",
+    "title": "Add CSS variables for daylight theme",
+    "category": "ui-ux",
+    "specFilePath": ".agent/tasks/TASK-3.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-4",
+    "title": "Add CSS variables for dusk theme",
+    "category": "ui-ux",
+    "specFilePath": ".agent/tasks/TASK-4.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-5",
+    "title": "Add CSS variables for nighttime theme",
+    "category": "ui-ux",
+    "specFilePath": ".agent/tasks/TASK-5.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-6",
+    "title": "Add CSS variables for morning theme",
+    "category": "ui-ux",
+    "specFilePath": ".agent/tasks/TASK-6.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-7",
+    "title": "Implement Sunlit.place-inspired background gradients per theme",
+    "category": "ui-ux",
+    "specFilePath": ".agent/tasks/TASK-7.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-8",
+    "title": "Build liquid-glass theme toggle component",
+    "category": "ui-ux",
+    "specFilePath": ".agent/tasks/TASK-8.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-9",
+    "title": "Create Project type and static projects data",
+    "category": "data-model",
+    "specFilePath": ".agent/tasks/TASK-9.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-10",
+    "title": "Implement homepage content block (name, bio, Projects, list)",
+    "category": "ui-ux",
+    "specFilePath": ".agent/tasks/TASK-10.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-11",
+    "title": "Apply 2-font typography scale (display + body)",
+    "category": "ui-ux",
+    "specFilePath": ".agent/tasks/TASK-11.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-12",
+    "title": "Wire theme provider and toggle into root layout",
+    "category": "functional",
+    "specFilePath": ".agent/tasks/TASK-12.json",
+    "passes": false
+  },
+  {
+    "id": "TASK-13",
+    "title": "Ensure mobile-responsive layout",
+    "category": "ui-ux",
+    "specFilePath": ".agent/tasks/TASK-13.json",
+    "passes": false
+  }
+]

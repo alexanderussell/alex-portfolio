@@ -1,0 +1,22 @@
+{
+  "id": "TASK-4",
+  "title": "Add CSS variables for dusk theme",
+  "category": "ui-ux",
+  "description": "Define grayscale CSS variables for dusk theme. Sunset-inspired, warmer grays, slightly darker than daylight.",
+  "acceptanceCriteria": [
+    "Variables for background, foreground, muted, border",
+    "Grayscale; dusk = warmer, slightly darker than daylight",
+    "Applied via [data-theme='dusk']"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Add dusk theme block",
+      "details": "In lib/src/styles.css, add [data-theme='dusk'] { ... }. Use warm gray tones, slightly darker background than daylight.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-3"],
+  "estimatedComplexity": "low",
+  "technicalNotes": []
+}

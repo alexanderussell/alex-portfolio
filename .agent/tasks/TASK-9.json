@@ -1,0 +1,30 @@
+{
+  "id": "TASK-9",
+  "title": "Create Project type and static projects data",
+  "category": "data-model",
+  "description": "Define Project interface and static projects list. Place in lib/content or similar.",
+  "acceptanceCriteria": [
+    "Project interface: id, title, href, optional description",
+    "Static array of projects exported",
+    "At least one placeholder project for development"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Define Project type",
+      "details": "Create lib/src/content/projects.ts. Export interface Project { id: string; title: string; href: string; description?: string }.",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Add static projects",
+      "details": "Export const projects: Project[] = [{ id: '1', title: 'Placeholder', href: '#', description: 'Sample' }]. Add 1-2 more placeholders for Alex Russell.",
+      "pass": false
+    }
+  ],
+  "dependencies": [],
+  "estimatedComplexity": "low",
+  "technicalNotes": [
+    "Content can later move to MD/MDX if needed"
+  ]
+}

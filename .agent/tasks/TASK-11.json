@@ -1,0 +1,31 @@
+{
+  "id": "TASK-11",
+  "title": "Apply 2-font typography scale (display + body)",
+  "category": "ui-ux",
+  "description": "Establish exactly 2 font sizes: display (name, headings) and body (bio, list). Grayscale. Minimal font choices.",
+  "acceptanceCriteria": [
+    "Display size: used for name, 'Projects' heading",
+    "Body size: used for bio, project list items",
+    "Only 2 sizes in use across page",
+    "Font family: single, readable (e.g. system-ui or one custom)"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Define typography tokens",
+      "details": "In styles.css, add --font-display and --font-body sizes (e.g. 2rem and 1rem). Or use Tailwind text-3xl and text-base consistently.",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Document usage",
+      "details": "Ensure name and section headings use display; bio and list use body. No other sizes.",
+      "pass": false
+    }
+  ],
+  "dependencies": [],
+  "estimatedComplexity": "low",
+  "technicalNotes": [
+    "Keep font stack simple; grayscale implies restraint"
+  ]
+}

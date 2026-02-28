@@ -1,0 +1,30 @@
+{
+  "id": "TASK-3",
+  "title": "Add CSS variables for daylight theme",
+  "category": "ui-ux",
+  "description": "Define grayscale CSS variables for daylight theme. Warm, bright base. Applied when data-theme='daylight'.",
+  "acceptanceCriteria": [
+    "Variables for background, foreground, muted, border in styles.css",
+    "Grayscale only (no accent colors)",
+    "Applied via [data-theme='daylight'] or .theme-daylight selector"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Add daylight theme block in styles.css",
+      "details": "In lib/src/styles.css, add [data-theme='daylight'] { ... } or :root when daylight. Define --background, --foreground, --muted, --border as grayscale values. Warm off-white background.",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Ensure default/fallback",
+      "details": "If using data-theme, ensure :root has daylight as default so unset case works.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-1"],
+  "estimatedComplexity": "low",
+  "technicalNotes": [
+    "Use oklch or hex for grayscale; keep consistent with existing shadcn tokens"
+  ]
+}

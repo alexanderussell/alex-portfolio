@@ -1,0 +1,35 @@
+{
+  "id": "TASK-13",
+  "title": "Ensure mobile-responsive layout",
+  "category": "ui-ux",
+  "description": "Layout works on 320px+ viewports. No horizontal scroll. Readable line lengths. Touch-friendly toggle.",
+  "acceptanceCriteria": [
+    "Content readable at 320px width",
+    "No horizontal overflow",
+    "Toggle has adequate touch target (min 44px)",
+    "Line length constrained (max-width) for readability"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Test at 320px",
+      "details": "Use dev tools responsive mode. Verify no overflow, content fits.",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Constrain line length",
+      "details": "Add max-w-prose or max-w-2xl to content block. Center with mx-auto.",
+      "pass": false
+    },
+    {
+      "step": 3,
+      "description": "Ensure touch target",
+      "details": "ThemeToggle button: min-h-[44px] min-w-[44px] or padding for touch.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-8", "TASK-10"],
+  "estimatedComplexity": "low",
+  "technicalNotes": []
+}

@@ -1,0 +1,45 @@
+{
+  "id": "TASK-8",
+  "title": "Build liquid-glass theme toggle component",
+  "category": "ui-ux",
+  "description": "Faint glassmorphism toggle at top of page. Shows current theme label. Click cycles to next theme. Accessible.",
+  "acceptanceCriteria": [
+    "Toggle has backdrop-blur, semi-transparent background",
+    "Displays current theme name (Daylight, Dusk, Nighttime, Morning)",
+    "Click/tap cycles to next theme",
+    "Keyboard focusable; ARIA label for screen readers",
+    "Positioned at top (fixed or in header)"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Create ThemeToggle component",
+      "details": "Create lib/src/components/ThemeToggle.tsx. Use useTheme from ThemeContext. Render button with backdrop-blur-md, bg-white/10 or similar. Text: theme label from THEME_LABELS map.",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Wire cycle on click",
+      "details": "onClick calls cycleTheme from context. Ensure no form submit.",
+      "pass": false
+    },
+    {
+      "step": 3,
+      "description": "Add accessibility",
+      "details": "aria-label='Cycle theme (current: Daylight)'. tabIndex 0. role='button' if not button.",
+      "pass": false
+    },
+    {
+      "step": 4,
+      "description": "Verify in browser",
+      "details": "Run dev server, click toggle, confirm theme cycles. Test keyboard focus.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-2"],
+  "estimatedComplexity": "medium",
+  "technicalNotes": [
+    "Use shadcn Button if it supports glass styling; otherwise custom",
+    "THEME_LABELS: { daylight: 'Daylight', dusk: 'Dusk', ... }"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "TASK-12",
+  "title": "Wire theme provider and toggle into root layout",
+  "category": "functional",
+  "description": "ThemeProvider wraps app. ThemeToggle in header or top. Init script applies theme before paint. Replace or extend existing theme logic.",
+  "acceptanceCriteria": [
+    "ThemeProvider wraps children in root",
+    "ThemeToggle visible at top of page",
+    "Init script applies stored theme to html before body",
+    "No flash of wrong theme on load"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Wrap app with ThemeProvider",
+      "details": "In lib/src/routes/__root.tsx, wrap TanStackQueryProvider children with ThemeProvider. Ensure ThemeProvider is client component.",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Add ThemeToggle to header",
+      "details": "In Header component, add ThemeToggle. Or add fixed ThemeToggle at top if header is simplified.",
+      "pass": false
+    },
+    {
+      "step": 3,
+      "description": "Update init script",
+      "details": "Replace THEME_INIT_SCRIPT to support daylight,dusk,nighttime,morning. Read localStorage, validate, set data-theme on documentElement.",
+      "pass": false
+    },
+    {
+      "step": 4,
+      "description": "Verify full flow",
+      "details": "Load page, cycle theme, refresh. Confirm theme persists and no flash.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-2", "TASK-8"],
+  "estimatedComplexity": "medium",
+  "technicalNotes": [
+    "Header/Footer may need simplification for minimal portfolio"
+  ]
+}

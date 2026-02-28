@@ -1,0 +1,38 @@
+{
+  "id": "TASK-2",
+  "title": "Create theme context and localStorage persistence",
+  "category": "functional",
+  "description": "React context provides current theme and setTheme. Theme is persisted to localStorage key 'theme'. Hydration-safe init script applies theme before paint.",
+  "acceptanceCriteria": [
+    "ThemeContext provides theme and cycleTheme",
+    "cycleTheme advances to next theme and persists to localStorage",
+    "Initial theme read from localStorage or defaults to 'daylight'",
+    "Init script in root applies theme class before body renders (no flash)"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Create ThemeProvider component",
+      "details": "Create lib/src/providers/ThemeProvider.tsx. Use React createContext for ThemeId and cycleTheme. State from useState, init from localStorage.getItem('theme') or 'daylight'. Validate stored value is valid ThemeId.",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Implement cycleTheme and persistence",
+      "details": "cycleTheme calls getNextTheme, setState, localStorage.setItem('theme', next). Apply theme to document.documentElement via data-theme or class.",
+      "pass": false
+    },
+    {
+      "step": 3,
+      "description": "Add init script for no-flash",
+      "details": "In __root.tsx, add inline script (before body) that reads localStorage theme, validates, applies to documentElement. Same pattern as existing THEME_INIT_SCRIPT but for 4 themes.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-1"],
+  "estimatedComplexity": "medium",
+  "technicalNotes": [
+    "Use data-theme attribute for Tailwind variant targeting",
+    "Ensure script runs before React hydration"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "TASK-7",
+  "title": "Implement Sunlit.place-inspired background gradients per theme",
+  "category": "ui-ux",
+  "description": "Full-page background gradients inspired by sunlit.place. Daylight: warm cream/gold. Dusk: amber/purple. Nighttime: dark subtle. Morning: cool pale.",
+  "acceptanceCriteria": [
+    "Background covers viewport; gradients per theme",
+    "Daylight: warm, bright (cream, soft gold)",
+    "Dusk: sunset tones (amber, soft purple)",
+    "Nighttime: near-black, subtle depth",
+    "Morning: cool pale (pale blue-gray)",
+    "Background does not block interactions (pointer-events or z-index)"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Add background layer to body or root",
+      "details": "In styles.css or root layout, add fixed full-viewport background. Use background-image with linear-gradient or radial-gradient. Position: fixed, inset: 0, z-index: -1.",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Define gradient for each theme",
+      "details": "Use [data-theme='daylight'] body::before or similar. Daylight: warm cream to soft gold. Dusk: amber to soft purple. Nighttime: dark grays. Morning: pale blue-gray.",
+      "pass": false
+    },
+    {
+      "step": 3,
+      "description": "Verify in browser",
+      "details": "Run npm run dev, cycle themes, confirm each shows distinct gradient. Check mobile viewport.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-3", "TASK-4", "TASK-5", "TASK-6"],
+  "estimatedComplexity": "medium",
+  "technicalNotes": [
+    "Sunlit.place uses dappled light, repeating gradients; adapt to simpler gradient for minimalism",
+    "Use mix-blend-mode sparingly if needed for warmth"
+  ]
+}

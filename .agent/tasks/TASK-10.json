@@ -1,0 +1,39 @@
+{
+  "id": "TASK-10",
+  "title": "Implement homepage content block (name, bio, Projects, list)",
+  "category": "ui-ux",
+  "description": "Replace index route with simple block: Alex Russell (name), bio paragraph, 'Projects' heading, projects list. Use 2 font sizes only.",
+  "acceptanceCriteria": [
+    "Name 'Alex Russell' displayed (display size)",
+    "Bio paragraph (body size)",
+    "'Projects' heading (display size)",
+    "Projects list with links (body size)",
+    "Exactly 2 font sizes used",
+    "Grayscale; minimal layout"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Update index route",
+      "details": "Edit lib/src/routes/index.tsx. Remove template content. Add name, bio, Projects heading, map over projects from content.",
+      "pass": false
+    },
+    {
+      "step": 2,
+      "description": "Apply typography classes",
+      "details": "Name and 'Projects': text-3xl or similar (display). Bio and list: text-base (body). Use CSS variables for color.",
+      "pass": false
+    },
+    {
+      "step": 3,
+      "description": "Verify in browser",
+      "details": "Run dev, check content renders. Confirm only 2 sizes. Screenshot for UI verification.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-9", "TASK-11"],
+  "estimatedComplexity": "low",
+  "technicalNotes": [
+    "Bio content can be placeholder; user will replace"
+  ]
+}

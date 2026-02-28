@@ -1,0 +1,22 @@
+{
+  "id": "TASK-6",
+  "title": "Add CSS variables for morning theme",
+  "category": "ui-ux",
+  "description": "Define grayscale CSS variables for morning theme. Cool, soft dawn tones.",
+  "acceptanceCriteria": [
+    "Variables for background, foreground, muted, border",
+    "Cool, soft grays; lighter than dusk, cooler than daylight",
+    "Applied via [data-theme='morning']"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Add morning theme block",
+      "details": "In lib/src/styles.css, add [data-theme='morning'] { ... }. Cool dawn grays.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-3"],
+  "estimatedComplexity": "low",
+  "technicalNotes": []
+}

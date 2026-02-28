@@ -1,0 +1,22 @@
+{
+  "id": "TASK-5",
+  "title": "Add CSS variables for nighttime theme",
+  "category": "ui-ux",
+  "description": "Define grayscale CSS variables for nighttime theme. Dark background, light text.",
+  "acceptanceCriteria": [
+    "Variables for background, foreground, muted, border",
+    "Dark background (near-black), light foreground",
+    "Applied via [data-theme='nighttime']"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "description": "Add nighttime theme block",
+      "details": "In lib/src/styles.css, add [data-theme='nighttime'] { ... }. Dark bg, light text, grayscale only.",
+      "pass": false
+    }
+  ],
+  "dependencies": ["TASK-3"],
+  "estimatedComplexity": "low",
+  "technicalNotes": []
+}
